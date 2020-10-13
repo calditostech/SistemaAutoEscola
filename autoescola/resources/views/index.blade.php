@@ -195,8 +195,8 @@ fieldset{
            @csrf
                <fieldset class="clearfix">
 
-            <p ><span class="fa fa-user"></span><input type="text"  Placeholder="Digite seu usuario" required></p> <!-- JS because of IE support; better: placeholder="Username" -->
-            <p><span class="fa fa-lock"></span><input type="password"  Placeholder="Digite sua senha" required></p> <!-- JS because of IE support; better: placeholder="Password" -->
+            <p ><span class="fa fa-user"></span><input type="text"  Placeholder="Digite seu usuario" name="usuario" required></p> <!-- JS because of IE support; better: placeholder="Username" -->
+            <p><span class="fa fa-lock"></span><input type="password"  Placeholder="Digite sua senha" name="senha" required></p> <!-- JS because of IE support; better: placeholder="Password" -->
             
              <div>
                                 <span style="width:48%; text-align:left;  display: inline-block;"><a class="small-text" href="#">Esqueceu a
