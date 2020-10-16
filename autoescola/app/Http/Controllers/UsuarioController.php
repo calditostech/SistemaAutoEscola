@@ -9,10 +9,11 @@ class UsuarioController extends Controller
 {
 
 
-    public function login(Request $request){
+    public function login(Request $request){  
 
     $usuario = $request->usuario;
     $senha = $request->senha;
+
 
     $usuarios = usuario::where('usuario', '=',$usuario)->where('senha','=',$senha)->first();
     

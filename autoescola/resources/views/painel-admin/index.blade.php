@@ -20,26 +20,26 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
     <h3 class="w3-wide"><b>AUTO-ESCOLA TURBO MENDES</b></h3>
   </div>
   <div class="w3-padding-64 w3-large w3-text-grey w3-blue" style="font-weight:bold;background-color: #0000FF; color: white;">
-    <a onclick="myAccFunc()" href="javascript:void(0)" class="w3-button w3-block w3-red w3-left-align w3-text-white" id="myBtn" style="background-color: red;color: white;">
-      Aulas <i class="fa fa-caret-down"></i>
+    <a onclick="myAccFunc1()" href="javascript:void(0)" class="w3-button w3-block w3-red w3-left-align w3-text-white" id="myBtn" style="background-color: red;color: white;">
+      Aulas <i class="far fa-id-card"></i>
     </a>
-    <div id="demoAcc" class="w3-bar-block w3-hide w3-padding-large w3-medium">
+    <div id="demoAcc1" class="w3-bar-block w3-hide w3-padding-large w3-medium">
       <a href="#" class="w3-bar-item w3-button">Agendar Aula</a>
       <a href="#" class="w3-bar-item w3-button">Cancelar Aula</a>
     </div>
-    <a onclick="myAccFunc()" href="javascript:void(0)" class="w3-button w3-block w3-yellow w3-left-align w3-text-white" id="myBtn">
-      Condutores <i class="fa fa-caret-down"></i>
+    <a onclick="myAccFunc2()" href="javascript:void(0)" class="w3-button w3-block w3-yellow w3-left-align w3-text-white" id="myBtn">
+      Condutores <i class="fas fa-user-alt"></i>
     </a>
-    <div id="demoAcc" class="w3-bar-block w3-hide w3-padding-large w3-medium">
+    <div id="demoAcc2" class="w3-bar-block w3-hide w3-padding-large w3-medium">
       <a href="#" class="w3-bar-item w3-button">Roberto</a>
       <a href="#" class="w3-bar-item w3-button">Moraes</a>
       <a href="#" class="w3-bar-item w3-button">Silvia</a>
       <a href="#" class="w3-bar-item w3-button">Lucia</a>
     </div>
-    <a onclick="myAccFunc()" href="javascript:void(0)" class="w3-button w3-block w3-green w3-left-align w3-text-white" id="myBtn">
-      Carros <i class="fa fa-caret-down"></i>
+    <a onclick="myAccFunc3()" href="javascript:void(0)" class="w3-button w3-block w3-green w3-left-align w3-text-white" id="myBtn">
+      Carros <i class="fas fa-car-side"></i>
     </a>
-    <div id="demoAcc" class="w3-bar-block w3-hide w3-padding-large w3-medium">
+    <div id="demoAcc3" class="w3-bar-block w3-hide w3-padding-large w3-medium">
       <a href="#" class="w3-bar-item w3-button">Versa</a>
       <a href="#" class="w3-bar-item w3-button">Onix</a>
       <a href="#" class="w3-bar-item w3-button">HB20</a>
@@ -67,7 +67,9 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
   <header class="w3-container w3-xlarge w3-blue">
     <p class="w3-left" style="font-size: 20px;">PAINEL ADMINISTRATIVO TURBO MENDES</p>
     <p class="w3-right">
-      <a href="">
+      Bem Vindo!<strong><?php echo $usuario; ?></strong>
+      <a href="{{route('usuarios.logout')}}">
+        @csrf
       <i class="fa fa-sign-out">Sair</i>
       </a>
     </p>
@@ -79,8 +81,26 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
 
 <script>
 // Accordion 
-function myAccFunc() {
-  var x = document.getElementById("demoAcc");
+function myAccFunc1() {
+  var x = document.getElementById("demoAcc1");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else {
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+
+function myAccFunc2() {
+  var x = document.getElementById("demoAcc2");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else {
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+
+function myAccFunc3() {
+  var x = document.getElementById("demoAcc3");
   if (x.className.indexOf("w3-show") == -1) {
     x.className += " w3-show";
   } else {
