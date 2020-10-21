@@ -7,6 +7,7 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
 <style>
 .w3-sidebar a {font-family: "Roboto", sans-serif}
 body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
@@ -24,7 +25,7 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
       Aulas <i class="far fa-id-card"></i>
     </a>
     <div id="demoAcc1" class="w3-bar-block w3-hide w3-padding-large w3-medium">
-      <a href="#" class="w3-bar-item w3-button">Agendar Aula</a>
+      <a href="{{('agenda-admin')}}" class="w3-bar-item w3-button">Agendar Aula</a>
       <a href="#" class="w3-bar-item w3-button">Cancelar Aula</a>
     </div>
     <a onclick="myAccFunc2()" href="javascript:void(0)" class="w3-button w3-block w3-yellow w3-left-align w3-text-white" id="myBtn">
@@ -67,7 +68,7 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
   <header class="w3-container w3-xlarge w3-blue">
     <p class="w3-left" style="font-size: 20px;">PAINEL ADMINISTRATIVO TURBO MENDES</p>
     <p class="w3-right">
-      Bem Vindo!<strong><?php echo $usuario; ?></strong>
+      Bem Vindo! <b>Usuario1</b>
       <a href="{{route('usuarios.logout')}}">
         @csrf
       <i class="fa fa-sign-out">Sair</i>
@@ -75,7 +76,31 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
     </p>
   </header>
 
-  <!-- Image header -->
+  <!-- Inicio Corpo -->
+
+  <div class="card-group sm-2" style="margin-top: 20px;">
+     <div class="card text-white bg-danger mb-3" style="max-width: 18rem;">
+  <div class="card-header" style="text-align: center;">Aulas Matinais</div>
+  <div class="card-body">
+    <h5 class="card-title">Aulas Confirmadas</h5>
+    <a href="#" class="btn btn-primary">Clique Aqui</a>
+  </div>
+</div>
+<div class="card text-white bg-warning mb-3" style="max-width: 18rem;">
+  <div class="card-header" style="text-align: center;">Aulas Vespertinas</div>
+  <div class="card-body">
+    <h5 class="card-title">Aulas Confirmadas</h5>
+    <a href="#" class="btn btn-primary">Clique Aqui</a>
+  </div>
+</div>
+<div class="card text-white bg-success mb-3" style="max-width: 18rem;">
+  <div class="card-header" style="text-align: center;">Aulas Noturnas</div>
+  <div class="card-body">
+    <h5 class="card-title">Aulas Confirmadas</h5>
+    <a href="#" class="btn btn-primary">Clique Aqui</a>
+  </div>
+</div>
+  </div>
 
 
 
@@ -122,6 +147,10 @@ function w3_close() {
   document.getElementById("myOverlay").style.display = "none";
 }
 </script>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
 
 </body>
 </html>
